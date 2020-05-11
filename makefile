@@ -5,16 +5,16 @@ CC = g++
 CFLAGS = -std=c++11 -c
 
 # run "make all" to run wrestlerRivalries
-all: wrestling
+all: wrestlerRivalries
 
 # make the wrestlerRivalries sort program
-change: wrestling.o
-	$(CC) wrestling.o
+change: wrestlerRivalries.o
+	$(CC) wrestlerRivalries.o -o wrestling
 
-wrestling.o:
+wrestlerRivalries.o:
 	$(CC) $(CFLAGS) wrestlerRivalries.cpp
 
 
 clean:
 	rm *.o
-	rm wrestling
+	rm wrestlerRivalries
